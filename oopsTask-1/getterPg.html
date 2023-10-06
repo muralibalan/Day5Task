@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       class Movie {
+  constructor(title,studio,rating) {
+    this.title = title;
+    this.studio = studio;
+    this.rating = rating;
+  }
+}
+
+class MovieCollection {
+  constructor(movies) {
+    this.movies = movies;
+  }
+  //get method
+  getPG() {
+    //only "PG" rated movies only filter
+    return this.movies.filter(movie => movie.rating === "PG");
+  }
+}
+
+// Example usage
+const movies = [
+  //all instance in array
+  new Movie("Casino Royale","Eon Productions","FG"),
+  new Movie("KGF","Hombale Film", "AA"),
+  new Movie("Master","YYYYY", "PG"),
+  new Movie("LKG","uuuuuu", "G"),
+  new Movie("ChandraMukhi","LYKA", "PG"),
+  new Movie("BhiGil","TTTTTT", "R"),
+];
+//instance of movieCollections
+const mCollection = new MovieCollection(movies);
+//call getPG
+const pgMovies = mCollection.getPG();
+//console all "PG" rated movies
+console.log(pgMovies); // This will contain only the "PG" rated movies
+    </script>
+</body>
+</html>

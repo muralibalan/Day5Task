@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       class Uber{
+        constructor(totalDistance,costperKM,costperMinute){
+            this.distance=totalDistance;
+            this.rate=costperKM;
+            this.waitingTime=costperMinute;
+        }
+        getPrice(){
+            //Price formula is totaldistance*perkmprice=price + waiting time* costperwaitingminute
+            const Price=(this.distance *this.rate)+ (5 * this.waitingTime);
+            return Price; 
+        }
+
+        getRideDetails(){
+            return (`Your Distance of ride is ${this.distance}KM's with perKM cost of your
+             ride Rs. ${this.rate}/- , waiting time ${this.waitingTime}-Minutes.`)
+        }
+       }
+       const details=new Uber(30,10,30);
+       console.log(`Your Total Price Rs.${details.getPrice()}`);
+       console.log(details.getRideDetails());
+    </script>
+</body>
+</html>

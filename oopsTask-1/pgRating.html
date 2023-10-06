@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //i have two method of this solution
+
+        //1.This is first method
+        class Movie{
+            constructor(title,studio,rating){
+                this.title=title;
+                this.studio=studio;
+                if(rating==null){
+                    return this.rating="PG";
+                }
+                else{
+                    return this.rating=rating;
+                }
+            }
+        }
+        const film= new Movie("Casino Royale","Eon Productions","PG13");
+        const film1= new Movie("Casino Royale2","Eon Productions","PG13");
+        const film2= new Movie("Casino Royale3","Eon Productions");
+        const film3= new Movie("Casino Royale4","Eon Productions",);
+        console.log(film);
+        console.log(film1);
+        console.log(film2);
+        console.log(film3);
+
+
+        // 2.This is scound method.
+        
+        // class Movie{
+        //     constructor(title,studio,rating="PG"){
+        //         this.title=title;
+        //         this.studio=studio;
+        //         this.rating=rating;
+            
+        //     }
+        // }
+        // const film= new Movie("Casino Royale","Eon Productions","PG13");
+        // const film1= new Movie("Casino Royale2","Eon Productions","PG13");
+        // const film2= new Movie("Casino Royale3","Eon Productions");
+        // const film3= new Movie("Casino Royale4","Eon Productions",);
+        // console.log(film);
+        // console.log(film1);
+        // console.log(film2);
+        // console.log(film3);
+    </script>
+</body>
+</html>

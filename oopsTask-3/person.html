@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(fname,lname,age,gender,email){
+                this.firstName=fname;
+                this.lastName=lname;
+                this.age=age;
+                this.gender=gender;
+                this.email=email;
+            }
+            getBioDetails(){
+                return (`Your Name is : ${this.firstName} ${this.lastName}. Your Age is : ${this.age}. Your Sex is : ${this.gender}. Your Email : ${this.email}`);
+
+            }
+
+        }
+        const personData=new Person("Murali","Vijayarengan",27,"male","muralibalan66@gmail.com");
+        console.log(personData.getBioDetails());
+        console.log(personData);
+    </script>
+</body>
+</html>
